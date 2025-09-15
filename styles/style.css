@@ -1,0 +1,53 @@
+/* Button hover effect */
+button {
+  background-color: #6c5ce7;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #00cec9;
+  transform: scale(1.1);
+}
+
+/* Box with animation */
+#animateBox {
+  width: 100px;
+  height: 100px;
+  background-color: #fd79a8;
+  margin: 20px auto;
+  position: relative;
+  transition: transform 0.5s ease;
+}
+
+/* Keyframe animation: bouncing */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-50px); }
+}
+
+.bouncing {
+  animation: bounce 1s infinite;
+}
+
+/* Popup style */
+.popup {
+  width: 200px;
+  padding: 15px;
+  background: #ffeaa7;
+  border-radius: 10px;
+  position: fixed;
+  top: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  transition: top 0.5s ease;
+}
+
+.popup.active {
+  top: 50px;
+}
